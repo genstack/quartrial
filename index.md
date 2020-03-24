@@ -25,6 +25,13 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
+<div id="observablehq-f75f4afe"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@observablehq/downloading-and-embedding-notebooks.js?v=3";
+const inspect = Inspector.into("#observablehq-f75f4afe");
+(new Runtime).module(define, name => (name === "graphic") && inspect());
+</script>
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
